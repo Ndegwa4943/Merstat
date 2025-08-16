@@ -1,0 +1,271 @@
+/* ============= CSS Variables ============= */
+:root {
+    --primary-blue: #003366;
+    --accent-yellow: #FFC300;
+    --text-light: #CEF4EB;
+    --light-green: rgba(206, 244, 235, 0.8);
+}
+
+/* ============= Base Styles ============= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: 
+        linear-gradient(to right, 
+        rgba(0, 51, 102, 0.3),
+        rgba(0, 51, 102, 0.4),
+        rgba(0, 51, 102, 0.5),
+        rgba(0, 51, 102, 0.6),
+        rgba(0, 51, 102, 0.7),
+        rgba(0, 51, 102, 0.8),
+        rgba(0, 51, 102, 0.9)), 
+        url(../images/Merstathero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 80px;
+    min-height: 100vh;
+    color: var(--text-light);
+}
+
+/* ============= Navigation Bar ============= */
+.navbar {
+    background: rgba(0, 51, 102, 0.95) !important;
+    padding: 0.8rem 1rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--accent-yellow) !important;
+    padding: 0;
+    margin-right: 2rem;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 195, 0, 0.5);
+    padding: 0.35rem 0.75rem;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 195, 0, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0 0.5rem;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-yellow) !important;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-yellow);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover:after,
+.nav-link.active:after {
+    width: 100%;
+}
+
+/* ============= About Us Content ============= */
+.about-us-section {
+    padding: 80px 100px;
+    background-color: transparent;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    gap: 40px;
+}
+
+.image-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.text-container {
+    flex: 1;
+}
+
+.text-container h2 {
+    font-size: 2.5rem;
+    color: var(--accent-yellow);
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.text-container p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* ============= Team Section ============= */
+.team-section {
+    margin-top: 60px;
+}
+
+.team-section h2 {
+    text-align: center;
+    color: var(--accent-yellow);
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.team-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.team-member {
+    text-align: center;
+    width: 200px;
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--accent-yellow);
+}
+
+.team-member h3 {
+    color: var(--accent-yellow);
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.team-member p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* ============= Footer ============= */
+footer {
+    background: rgba(255, 196, 0, 0.75);
+    color: var(--primary-blue);
+    padding: 2rem 0;
+    margin-top: 60px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* ============= Responsive Adjustments ============= */
+@media (max-width: 992px) {
+    .about-us-section {
+        padding: 60px 40px;
+    }
+    
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .image-container,
+    .text-container {
+        width: 100%;
+    }
+    
+    .image-container {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us-section {
+        padding: 50px 20px;
+    }
+    
+    .text-container h2 {
+        font-size: 2rem;
+    }
+    
+    .team-member {
+        width: 150px;
+    }
+    
+    .team-member img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-us-section {
+        padding: 40px 15px;
+    }
+    
+    .text-container h2 {
+        font-size: 1.8rem;
+    }
+    
+    .team-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .team-member {
+        width: 100%;
+        max-width: 200px;
+    }
+}

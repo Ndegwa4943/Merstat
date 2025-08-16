@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtualenv
+.venv/
+env/
+venv/
+
+# Env & secrets
+.env
+
+# Local DB
+*.sqlite
+*.sqlite3
+*.db
+
+# Uploads (server will create)
+uploads/
+
+# IDE
+.vscode/
+.idea/
